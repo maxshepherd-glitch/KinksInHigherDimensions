@@ -38,7 +38,7 @@ lgd.EdgeColor = 'black';
 exportgraphics(gcf,'Energy_nDimensions.png', ...
     'Resolution',300,'BackgroundColor','white');
 
-% Plot log(E) against R for each dimension in n_list
+% Plot log(E) against log(R) for each dimension in n_list
 figure; hold on
 for n = n_list
     E = sigma * R.^(n-1);
