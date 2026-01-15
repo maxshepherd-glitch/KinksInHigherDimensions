@@ -8,13 +8,13 @@ set(0, 'DefaultFigureColor', 'w', ...
        'DefaultAxesTitleFontWeight', 'normal');
 
 % Radius range
-R = linspace(0,5,400);
+R = linspace(0, 5, 400);
 
 % E per unit A_{n-1}
 sigma = 1;   
 
 % Dimensions to compare
-n_list = [1,2,3,4];
+n_list = [1, 2, 3, 4];
 
 % Plot E against R for each dimension in n_list
 figure; hold on
@@ -29,13 +29,13 @@ ylabel('$E(R)$','Interpreter','latex','FontSize',12)
 title('Scaling energy with spatial dimension', ...
       'Interpreter','latex','FontSize',24)
 
-lgd = legend({'$n=1$','$n=2$','$n=3$','$n=4$'}, ...
+lgd = legend({'$n=1$', '$n=2$', '$n=3$', '$n=4$'}, ...
        'Interpreter','latex','Location','northwest');
 lgd.Color = 'white';
 lgd.TextColor = 'black';    
 lgd.EdgeColor = 'black';
 
-exportgraphics(gcf,'Energy_nDimensions.png', ...
+exportgraphics(gcf, 'Energy_nDimensions.png',  ...
     'Resolution',300,'BackgroundColor','white');
 
 % Plot log(E) against log(R) for each dimension in n_list
