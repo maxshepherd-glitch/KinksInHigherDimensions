@@ -7,7 +7,7 @@ set(0, 'DefaultFigureColor', 'w', ...
        'DefaultTextColor', 'k', ...
        'DefaultAxesTitleFontWeight', 'normal');
 
-% Domain size and grid resolution
+% Domain size and number of grid points
 Lx = 10;
 Ly = 6;
 Nx = 1200;
