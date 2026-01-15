@@ -52,7 +52,7 @@ cz = sx_x*sy_y - sy_x*sx_y;
 % Compute the topological charge density
 q = (1/(4*pi)) *  (sx.*cx + sy.*cy + sz.*cz);
 
-% Numerically integrate q over the plane to get the total charge Q
+% Numerically integrate q to get the total charge Q
 Q = sum(q, 'all') * dx * dy;
 
 % 2D colour plot of topological charge density
