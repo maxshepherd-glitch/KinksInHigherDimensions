@@ -18,11 +18,10 @@ x = linspace(-Lx, Lx, Nx);
 y = linspace(-Ly, Ly, Ny);
 dx = x(2) - x(1);
 dy = y(2) - y(1);
-
 [X, Y] = meshgrid(x, y);
 
 % Define potential
-U = @(phi) 0.5*(1-phi.^2).^2;
+U = @(phi) 1/2 * (1 - phi.^2).^2;
 
 % Define sech for simplicity
 sech = @(z) 1./cosh(z);
@@ -35,7 +34,7 @@ phiX = sech(X).^2;
 phiY = zeros(size(phi));
 
 % Energy density and energy per unit length
-e = 0.5*(phiX.^2 + phiY.^2) + U(phi);
+e = 1/2 * (phiX.^2 + phiY.^2) + U(phi);
 
 % Total energy on finite box
 E = sum(e, 'all') * dx * dy;
